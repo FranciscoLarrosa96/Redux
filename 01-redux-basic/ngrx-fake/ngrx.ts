@@ -4,7 +4,6 @@ export interface Action {
     payload?: any;
 }
 
-export interface Reducer {
-    type: string;
-    payload?: any;
+export interface Reducer<T> {
+    (state: T, action: Action): T,
 }
